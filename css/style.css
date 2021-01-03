@@ -1,0 +1,226 @@
+* {
+     box-sizing: border-box;
+}
+
+img {
+     display: block;
+}
+
+
+.container {
+     max-width: 1140px;
+     padding: 0 15px;
+     margin: 0 auto;
+}
+
+body {
+     background: #333333;
+     font-family: 'Open Sans Condensed', sans-serif;
+     font-weight: 700;
+}
+
+.title {
+     padding-top: 150px;
+}
+
+/* HEADER START */
+
+.header {
+     background: url(../img/header-bg.svg)no-repeat center center/ cover;
+     position: relative;
+}
+
+.header::after {
+     content: '';
+     display: block;
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     background: linear-gradient(0deg, rgba(51, 51, 51, 0.85), rgba(51, 51, 51, 0.85));
+     z-index: 1;
+}
+
+.header__banner,
+.header__nav {
+     position: relative;
+     z-index: 10;
+}
+
+.header__nav {
+     padding-top: 50px;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.header__list {
+     display: flex;
+     align-items: center;
+     width: 75%;
+     max-width: 824px;
+     justify-content: space-between;
+     list-style: none;
+}
+
+
+.header__link {
+     text-decoration: none;
+     display: inline-block;
+     font-weight: 700;
+     font-size: 18px;
+     line-height: 25px;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     color: #FFFFFF;
+}
+
+.header__phone {
+     display: inline-block;
+     font-style: normal;
+     font-weight: bold;
+     font-size: 16px;
+     line-height: 22px;
+     text-align: right;
+     letter-spacing: 0.05em;
+     text-transform: uppercase;
+     color: #FFFFFF;
+     text-decoration: none;
+}
+
+.header__link,
+.header__phone {
+     position: relative;
+}
+
+.header__link::after,
+.header__phone::after {
+     content: '';
+     display: block;
+     position: absolute;
+     width: 100%;
+     height: 2px;
+     background-color: #D1A954;
+     transform: translateX(-150%);
+     opacity: 0;
+     transition: opacity .3s, transform .3s;
+}
+
+.header__link:hover::after,
+.header__phone:hover::after {
+     opacity: 1;
+     transform: translateX(0);
+}
+
+.header__btn {
+     font-family: Open Sans Condensed;
+     font-weight: bold;
+     font-size: 18px;
+     line-height: 25px;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     color: #FFFFFF;
+
+     padding: 15px 43px;
+     background: #EB5757;
+     border: 0;
+     outline: none;
+     transition: background .3s, transform .3s, box-shadow .3s;
+}
+
+.header__btn:hover {
+     background: #f81212;
+}
+
+.header__btn:active {
+     transform: scale(.85);
+     box-shadow: #f81212 0 0 35px;
+}
+
+.header__banner {
+     height: calc(100vh - 74px);
+     display: flex;
+     align-items: center;
+}
+
+.header__info {
+     width: 50%;
+}
+
+.header__title {
+     font-weight: bold;
+     font-size: 64px;
+     line-height: 87px;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     color: #FFFFFF;
+     margin-bottom: 50px;
+}
+
+.header_description {
+     font-family: Open Sans;
+     font-weight: normal;
+     font-size: 14px;
+     line-height: 150%;
+     color: #FFFFFF;
+     margin-bottom: 50px;
+}
+
+.header__slider {
+     overflow: hidden;
+}
+
+.slider__item {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.header__btn {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.slider__img-block {}
+
+.slider__img {
+     width: 370px;
+     height: 510px;
+     margin-bottom: 51px;
+}
+
+.slider__btns {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.swiper-button-prev {
+     padding: 0 0 0 75px;
+     background: url(../img/Arrow-left.png)no-repeat left center;
+}
+
+.swiper-button-next {
+     padding: 0 75px 0 0;
+     background: url(../img/Arrow-right.png)no-repeat right center;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+     position: relative;
+     font-weight: bold;
+     font-size: 18px;
+     line-height: 25px;
+     letter-spacing: 0.1em;
+     text-transform: uppercase;
+     color: #C4C4C4;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+     display: none;
+}
+
+/* HEADER END*/
